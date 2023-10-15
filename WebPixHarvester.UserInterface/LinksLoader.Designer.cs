@@ -120,6 +120,7 @@
             toolStripButton1.Name = "toolStripButton1";
             toolStripButton1.Size = new Size(39, 22);
             toolStripButton1.Text = "Paste";
+            toolStripButton1.Click += toolStripButton1_Click;
             // 
             // toolStripButton3
             // 
@@ -129,6 +130,7 @@
             toolStripButton3.Name = "toolStripButton3";
             toolStripButton3.Size = new Size(55, 22);
             toolStripButton3.Text = "Clear All";
+            toolStripButton3.Click += toolStripButton3_Click;
             // 
             // toolStripButton4
             // 
