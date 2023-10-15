@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebPixHarvester.LogicLayer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WebPixHarvester.UserInterface
@@ -19,14 +20,14 @@ namespace WebPixHarvester.UserInterface
         }
         private List<string> GetLinesFromTextBox(System.Windows.Forms.TextBox textBox)
         {
-            // Split the text based on line breaks and return as a List<string>
             return new List<string>(textBox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None));
         }
-
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             //Clear whats existing
             var links = GetLinesFromTextBox(textBox1);
+            toolStripStatusLabel2.Text = $"Total Links: {links.Count}";
+            links = links.Where(l => URLHelper.IsUrlValid(l) == true).ToList();
             PopulateCheckedListBox(links);
         }
         private void PopulateCheckedListBox(List<string> links)
@@ -42,7 +43,7 @@ namespace WebPixHarvester.UserInterface
         }
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            if(checkedListBox1.Items.Count > 0)
+            if (checkedListBox1.Items.Count > 0)
             {
                 if (toolStripButton2.Text == "Select All")
                 {
@@ -68,12 +69,10 @@ namespace WebPixHarvester.UserInterface
                 }
             }
         }
-
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
         }
-
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             if (Clipboard.ContainsText())

@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WebPixHarvester.UserInterface
 {
@@ -12,7 +13,7 @@ namespace WebPixHarvester.UserInterface
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if(_LinksLoader == null)
+            if (_LinksLoader == null)
             {
                 _LinksLoader = new Form();
                 _LinksLoader.Text = "Links Loader";
@@ -31,5 +32,11 @@ namespace WebPixHarvester.UserInterface
             e.Cancel = true;
             _LinksLoader.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+        
     }
 }
