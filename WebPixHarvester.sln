@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPixHarvester.UserInterface", "WebPixHarvester.UserInterface\WebPixHarvester.UserInterface.csproj", "{5E032BB8-611B-452C-821C-B9C6A3C1E2F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPixHarvester.LogicLayer", "WebPixHarvester.LogicLayer\WebPixHarvester.LogicLayer.csproj", "{D062FC9B-759D-485B-8A8D-11993DB4DFFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E032BB8-611B-452C-821C-B9C6A3C1E2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E032BB8-611B-452C-821C-B9C6A3C1E2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E032BB8-611B-452C-821C-B9C6A3C1E2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E032BB8-611B-452C-821C-B9C6A3C1E2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D062FC9B-759D-485B-8A8D-11993DB4DFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D062FC9B-759D-485B-8A8D-11993DB4DFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D062FC9B-759D-485B-8A8D-11993DB4DFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D062FC9B-759D-485B-8A8D-11993DB4DFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7547F348-5420-4B4B-B3B5-865C991BBEA6}
+	EndGlobalSection
+EndGlobal
