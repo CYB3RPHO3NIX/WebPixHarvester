@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.54" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebPixHarvester.Data.Models\WebPixHarvester.Data.Models.csproj" />
+  </ItemGroup>
+
 </Project>

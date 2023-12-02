@@ -51,6 +51,7 @@
             // 
             // statusStrip1
             // 
+            statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel2 });
             statusStrip1.Location = new Point(0, 478);
             statusStrip1.Name = "statusStrip1";
@@ -61,8 +62,8 @@
             // toolStripStatusLabel2
             // 
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(86, 17);
-            toolStripStatusLabel2.Text = "Total Links: 341";
+            toolStripStatusLabel2.Size = new Size(74, 17);
+            toolStripStatusLabel2.Text = "Total Links: 0";
             // 
             // splitContainer1
             // 
@@ -74,15 +75,15 @@
             // 
             splitContainer1.Panel1.Controls.Add(textBox1);
             splitContainer1.Panel1.Controls.Add(toolStrip1);
-            splitContainer1.Panel1.Padding = new Padding(5);
+            splitContainer1.Panel1.Padding = new Padding(5, 5, 5, 5);
             // 
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(checkedListBox1);
             splitContainer1.Panel2.Controls.Add(toolStrip2);
-            splitContainer1.Panel2.Padding = new Padding(5);
+            splitContainer1.Panel2.Padding = new Padding(5, 5, 5, 5);
             splitContainer1.Size = new Size(800, 478);
-            splitContainer1.SplitterDistance = 397;
+            splitContainer1.SplitterDistance = 396;
             splitContainer1.TabIndex = 1;
             // 
             // textBox1
@@ -91,17 +92,18 @@
             textBox1.Location = new Point(5, 30);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(387, 443);
+            textBox1.Size = new Size(386, 443);
             textBox1.TabIndex = 1;
             // 
             // toolStrip1
             // 
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
+            toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton3, toolStripButton4 });
             toolStrip1.Location = new Point(5, 5);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(5, 0, 5, 0);
-            toolStrip1.Size = new Size(387, 25);
+            toolStrip1.Size = new Size(386, 25);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -138,21 +140,23 @@
             // 
             // checkedListBox1
             // 
+            checkedListBox1.CheckOnClick = true;
             checkedListBox1.Dock = DockStyle.Fill;
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Location = new Point(5, 30);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(389, 443);
+            checkedListBox1.Size = new Size(390, 443);
             checkedListBox1.TabIndex = 1;
             // 
             // toolStrip2
             // 
             toolStrip2.GripStyle = ToolStripGripStyle.Hidden;
+            toolStrip2.ImageScalingSize = new Size(20, 20);
             toolStrip2.Items.AddRange(new ToolStripItem[] { toolStripButton2 });
             toolStrip2.Location = new Point(5, 5);
             toolStrip2.Name = "toolStrip2";
             toolStrip2.Padding = new Padding(5, 0, 5, 0);
-            toolStrip2.Size = new Size(389, 25);
+            toolStrip2.Size = new Size(390, 25);
             toolStrip2.TabIndex = 0;
             toolStrip2.Text = "toolStrip2";
             // 

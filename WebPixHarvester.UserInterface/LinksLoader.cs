@@ -18,6 +18,19 @@ namespace WebPixHarvester.UserInterface
         {
             InitializeComponent();
         }
+        public List<string>? GetAllUrls()
+        {
+            List<string>? links = null;
+            if (checkedListBox1.Items.Count > 0)
+            {
+                links = new List<string>();
+                foreach (string url in checkedListBox1.CheckedItems)
+                {
+                    links.Add(url);
+                }
+            }
+            return links;
+        }
         private List<string> GetLinesFromTextBox(System.Windows.Forms.TextBox textBox)
         {
             return new List<string>(textBox.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None));

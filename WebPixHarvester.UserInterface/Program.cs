@@ -1,3 +1,6 @@
+using Microsoft.Extensions.DependencyInjection;
+using WebPixHarvester.LogicLayer;
+
 namespace WebPixHarvester.UserInterface
 {
     internal static class Program
@@ -9,7 +12,14 @@ namespace WebPixHarvester.UserInterface
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainWindow());
+            var services = new ServiceCollection();
+            Services.ConfigureServices(services);
+            using (var serviceProvider = services.BuildServiceProvider())
+            {
+                var grabberService = serviceProvider.GetRequiredService<ILinkGrabber>();
+                Application.Run(new MainWindow(grabberService));
+            }
+            
         }
     }
 }
