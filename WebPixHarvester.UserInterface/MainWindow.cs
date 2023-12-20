@@ -281,7 +281,7 @@ namespace WebPixHarvester.UserInterface
             Color selectedBorderColor = Color.Cyan; // Change to the selected border color
 
             // Set the border width
-            int borderWidth = 20; // Adjust the thickness as needed
+            int offset = 20; // Adjust the thickness as needed
 
             // Update the PictureBox appearance based on the selection state
             if (isSelected)
@@ -289,6 +289,9 @@ namespace WebPixHarvester.UserInterface
                 // Selected state with thick border
                 pictureBox.BorderStyle = BorderStyle.Fixed3D;
                 pictureBox.BackColor = selectedBorderColor;
+                pictureBox.Width = pictureBox.Width - offset;
+                pictureBox.Height = pictureBox.Height - offset;
+                pictureBox.Refresh();
                 // Perform additional actions for selected state if needed
             }
             else
@@ -296,6 +299,9 @@ namespace WebPixHarvester.UserInterface
                 // Deselected state with no border
                 pictureBox.BorderStyle = BorderStyle.None;
                 pictureBox.BackColor = originalBorderColor;
+                pictureBox.Width = pictureBox.Width + offset;
+                pictureBox.Height = pictureBox.Height + offset;
+                pictureBox.Refresh();
                 // Perform additional actions for deselected state if needed
             }
 
